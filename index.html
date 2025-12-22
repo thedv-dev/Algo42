@@ -409,7 +409,27 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+
+@media (max-width: 768px) {
+  nav ul li:nth-child(n+5) {
+    display: none;
+  }
 }
+    @media (max-width: 720px) {
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  #hero h1 {
+    text-shadow: 0 0 10px var(--neon-green);
+  }
+
+  .card {
+    transform: none !important;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -453,19 +473,19 @@
           <h3>AI Workshop</h3>
           <p>Date: August 15, 2024</p>
           <p>Interactive sessions on deep learning fundamentals and cutting-edge research trends.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read more about AI Workshop">Read More</a>
+          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
         </article>
         <article class="card" role="listitem" tabindex="0" aria-label="Annual ML Hackathon">
           <h3>Annual ML Hackathon</h3>
           <p>Date: September 28-29, 2024</p>
           <p>Two days of intense coding and creativity building AI-driven solutions to real problems.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read more about Annual ML Hackathon">Read More</a>
+          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
         </article>
         <article class="card" role="listitem" tabindex="0" aria-label="Guest Speaker Series: AI Ethics">
           <h3>Guest Speaker Series: AI Ethics</h3>
           <p>Date: October 10, 2024</p>
           <p>Join leading experts discussing ethical considerations in AI development and deployment.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read more about AI Ethics Speaker Series">Read More</a>
+          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
         </article>
       </div>
     </section>
@@ -550,7 +570,7 @@
 </script>
 
   <footer>
-    <p>&copy; 2024 ALgo42 AI/ML Student Club. All Rights Reserved. | <a href="https://github.com/algo42" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    <p>&copy; 2025-56 ALgo42 AI/ML Student Club. All Rights Reserved. | <a href="https://github.com/algo42" target="_blank" rel="noopener noreferrer">GitHub</a></p>
   </footer>
 
   <script>
