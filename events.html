@@ -2,282 +2,942 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events | ALgo42</title>
-
-  <!-- SEO -->
-  <meta name="description" content="AI & ML workshops, events, and sessions organized by ALgo42 student club." />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Shared CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events - ALgo42 First Fest 2025 | Register for AI/ML Tech Events</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Register for ALgo42 First Fest 2025 events: Esports Tournament, Poster Making, Technical Quiz, Coding Challenges, Open Mic, and Pitch Competition. Join the AI/ML student community!" />
+  <meta name="keywords" content="ALgo42 events, tech fest, esports tournament, poster making, technical quiz, coding challenge, open mic, pitch competition, AI events, ML workshops" />
+  <meta name="author" content="ALgo42 AI/ML Club" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ALgo42 First Fest 2025 - Events & Registration" />
+  <meta property="og:description" content="Register for 6 exciting events at ALgo42 First Fest 2025. Esports, Tech Quiz, Coding, and more!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/events.html" />
+  <meta property="og:image" content="https://yourwebsite.com/images/events-og.jpg" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALgo42 First Fest 2025 Events" />
+  <meta name="twitter:description" content="6 exciting events - Register now!" />
+  <meta name="twitter:image" content="https://yourwebsite.com/images/events-twitter.jpg" />
+  
+  <link rel="icon" href="data:,">
+  <link rel="canonical" href="https://yourwebsite.com/events.html" />
   <style>
-    /* Page-specific styles */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+    :root {
+      --electric-blue: #00a8ff;
+      --neon-green: #39ff14;
+      --black-bg: #0a0a0a;
+      --glow-blue: #00ccff;
+      --glow-green: #4dff4d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: "Inter", sans-serif;
-      background: #050505;
-      color: #eaeaea;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: var(--black-bg);
+      color: #ddd;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    main {
-      padding: 120px 6% 80px;
+    a {
+      color: var(--electric-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: var(--neon-green);
+      text-shadow: 0 0 10px var(--neon-green);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--electric-blue);
+      text-shadow: 0 0 10px var(--electric-blue);
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(0,168,255,0.3);
+      padding: 15px 20px;
+    }
+
+    .nav-container {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
+    .nav-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: var(--neon-green);
+      text-shadow: 0 0 10px var(--neon-green);
+      font-weight: 700;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: var(--neon-green);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: block;
+    }
+    
+    nav a:hover, nav a.active {
+      background-color: var(--neon-green);
+      color: black;
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Page Header */
     .page-header {
       text-align: center;
-      margin-bottom: 70px;
+      padding: 80px 20px 60px;
+      background: radial-gradient(circle at center, rgba(0,168,255,0.05), transparent);
     }
 
     .page-header h1 {
-      font-size: 3rem;
-      background: linear-gradient(90deg, #00f5a0, #00d9ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 3.5rem;
+      margin-bottom: 0.3em;
+      color: var(--neon-green);
+      text-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--electric-blue);
+    }
+
+    .page-header .subtitle {
+      font-size: 1.5rem;
+      color: var(--electric-blue);
+      margin-bottom: 15px;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px var(--electric-blue);
     }
 
     .page-header p {
+      font-size: 1.2rem;
       max-width: 700px;
-      margin: 20px auto 0;
+      margin: 0 auto;
       color: #aaa;
     }
 
-    .event-section {
-      margin-bottom: 90px;
+    section {
+      padding: 60px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .event-section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      border-left: 4px solid #00f5a0;
-      padding-left: 14px;
-    }
-
-    .event-grid {
+    /* Events Grid */
+    .events-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
     .event-card {
-      background: #0b0b0b;
-      border-radius: 16px;
-      padding: 26px;
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: linear-gradient(135deg, #111 0%, #0d0d0d 100%);
+      border-radius: 20px;
+      padding: 30px;
+      border: 2px solid #333;
+      box-shadow: 0 0 25px rgba(0,168,255,0.15);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .event-card:hover::before {
+      opacity: 1;
     }
 
     .event-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 30px rgba(0,245,160,0.12);
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--neon-green), 0 5px 30px rgba(57,255,20,0.2);
+      border-color: var(--neon-green);
     }
 
     .event-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--neon-green);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .event-icon {
+      font-size: 2rem;
+      filter: drop-shadow(0 0 10px var(--neon-green));
     }
 
     .event-meta {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .event-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 0.9rem;
-      color: #8a8a8a;
-      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
 
-    .event-desc {
-      font-size: 0.95rem;
-      color: #cfcfcf;
-      margin-bottom: 22px;
+    .event-meta-item .label {
+      color: var(--electric-blue);
+      font-weight: 600;
+      min-width: 75px;
     }
 
-    .event-tags {
-      font-size: 0.8rem;
-      color: #7dffd2;
-      margin-bottom: 20px;
+    .event-meta-item .value {
+      color: #bbb;
+    }
+
+    .event-details {
+      margin: 25px 0;
+    }
+
+    .event-details h4 {
+      font-size: 1.1rem;
+      margin: 20px 0 12px;
+      color: var(--electric-blue);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .detail-icon {
+      font-size: 1rem;
+    }
+
+    .placeholder {
+      padding: 15px;
+      background: #0a0a0a;
+      border-radius: 10px;
+      border: 1px dashed #333;
+      color: #666;
+      font-size: 0.85rem;
+      font-style: italic;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .placeholder:hover {
+      border-color: #555;
+      color: #888;
+    }
+
+    .event-team {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #333;
+      background: #0d0d0d;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .event-team h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: var(--neon-green);
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .team-member .role-label {
+      color: var(--electric-blue);
+      font-weight: 600;
+      min-width: 85px;
+    }
+
+    .team-member .name-input {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 6px 12px;
+      color: #888;
+      font-size: 0.85rem;
+      font-style: italic;
+      flex: 1;
+      min-width: 120px;
     }
 
     .event-actions {
+      margin-top: 30px;
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 10px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      border-radius: 30px;
+      font-weight: 700;
       transition: all 0.3s ease;
       display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
     }
 
-    .btn.primary {
-      background: linear-gradient(90deg, #00f5a0, #00d9ff);
-      color: #000;
+    .btn-primary {
+      background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
+      color: black;
+      box-shadow: 0 0 20px rgba(57,255,20,0.3);
     }
 
-    .btn.primary:hover {
-      opacity: 0.85;
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--neon-green);
     }
 
-    .btn.secondary {
-      border: 1px solid #00f5a0;
-      color: #00f5a0;
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--electric-blue);
+      color: var(--electric-blue);
     }
 
-    .btn.secondary:hover {
-      background: rgba(0,245,160,0.1);
+    .btn-secondary:hover {
+      background: var(--electric-blue);
+      color: black;
+      box-shadow: 0 0 20px var(--electric-blue);
     }
 
-    .past .event-card {
-      opacity: 0.7;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 0.9rem;
+      background: #0a0a0a;
+      margin-top: 60px;
     }
 
-    .past .event-card:hover {
-      opacity: 1;
+    footer a {
+      color: var(--electric-blue);
+      margin: 0 10px;
     }
 
+    /* Mobile Responsive */
     @media (max-width: 768px) {
-      .page-header h1 {
-        font-size: 2.2rem;
+      .hamburger {
+        display: flex;
       }
+
+      nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: #0d0d0d;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 40px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+      }
+
+      nav ul.active {
+        right: 0;
+      }
+
+      nav a {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+      }
+
+      .page-header {
+        padding: 60px 20px 40px;
+      }
+
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+
+      .page-header .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .page-header p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .event-card {
+        padding: 25px;
+      }
+
+      .event-card h3 {
+        font-size: 1.6rem;
+      }
+
+      .event-icon {
+        font-size: 1.8rem;
+      }
+
+      .event-details h4 {
+        font-size: 1rem;
+      }
+
+      .event-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .page-header .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .nav-logo {
+        font-size: 1.3rem;
+      }
+
+      .event-card h3 {
+        font-size: 1.4rem;
+      }
+
+      .event-card {
+        padding: 20px;
+      }
+
+      .event-meta-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .event-meta-item .label {
+        min-width: auto;
+      }
+
+      .team-member {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .team-member .role-label {
+        min-width: auto;
+      }
+
+      .team-member .name-input {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR (same as other pages) -->
-  <header>
-    <nav>
-      <div class="logo">ALgo42</div>
-
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        ☰
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ALgo42</div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-
-      <ul id="nav-links">
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="structure.html">Structure & Team</a></li>
         <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="join.html">Join</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <!-- MAIN -->
+  <div class="page-header">
+    <div class="subtitle">ALgo42 Presents</div>
+    <h1>First Fest 2025</h1>
+    <p>Join us for an exciting lineup of events celebrating AI, ML, and innovation</p>
+  </div>
+
   <main>
 
-    <!-- PAGE INTRO -->
-    <section class="page-header fade-in">
-      <h1>Events</h1>
-      <p>
-        Hands-on workshops, talks, and collaborative sessions
-        organized by the ALgo42 AI & ML Student Club.
-      </p>
-    </section>
+    <section class="fade-in">
+      <div class="events-grid">
 
-    <!-- UPCOMING EVENTS -->
-    <section id="upcoming" class="event-section fade-in">
-      <h2>Upcoming Events</h2>
-
-      <div class="event-grid">
-
-        <article class="event-card">
-          <h3>AI Foundations Workshop</h3>
-          <div class="event-meta">📅 15 July 2025 · ⏰ 10:00 AM</div>
-          <p class="event-desc">
-            A beginner-friendly hands-on workshop covering AI,
-            machine learning basics, and real-world applications.
-          </p>
-          <div class="event-tags">
-            ✔ Free · ✔ Certificate · ✔ Open to all
+        <!-- Event 1: Esports -->
+        <div class="event-card" id="esports">
+          <h3>
+            <span class="event-icon">🎮</span>
+            <span>Esports Tournament</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">Squad Only</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Games:</span>
+              <span class="value">Free Fire, BGMI</span>
+            </div>
           </div>
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
+          </div>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
           <div class="event-actions">
-            <a href="https://forms.gle/XXXX" target="_blank" class="btn primary">
-              Register
-            </a>
-            <a href="#" class="btn secondary">
-              Details
-            </a>
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
           </div>
-        </article>
+        </div>
 
-        <article class="event-card">
-          <h3>Prompt Engineering Jam</h3>
-          <div class="event-meta">📅 28 July 2025 · ⏰ 2:00 PM</div>
-          <p class="event-desc">
-            Learn how to craft effective prompts for AI systems
-            and participate in live prompt challenges.
-          </p>
-          <div class="event-tags">
-            ✔ Hands-on · ✔ Limited seats
+        <!-- Event 2: Poster Making -->
+        <div class="event-card" id="poster">
+          <h3>
+            <span class="event-icon">🎨</span>
+            <span>Poster Making</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">Individual</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Tool:</span>
+              <span class="value">Canva Only</span>
+            </div>
           </div>
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
+          </div>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
           <div class="event-actions">
-            <a href="https://forms.gle/XXXX" target="_blank" class="btn primary">
-              Register
-            </a>
-            <a href="#" class="btn secondary">
-              Details
-            </a>
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
           </div>
-        </article>
+        </div>
 
-      </div>
-    </section>
-
-    <!-- PAST EVENTS -->
-    <section id="past" class="event-section past fade-in">
-      <h2>Past Events</h2>
-
-      <div class="event-grid">
-
-        <article class="event-card">
-          <h3>Introduction to Python</h3>
-          <div class="event-meta">📅 March 2025</div>
-          <p class="event-desc">
-            A beginner coding session introducing Python
-            for AI and automation.
-          </p>
-          <div class="event-tags">
-            ✔ 120+ participants
+        <!-- Event 3: Technical Quiz -->
+        <div class="event-card" id="quiz">
+          <h3>
+            <span class="event-icon">🧠</span>
+            <span>Technical Quiz</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">Duo</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Focus:</span>
+              <span class="value">AI/ML & Tech</span>
+            </div>
           </div>
-        </article>
-
-        <article class="event-card">
-          <h3>AI in Real Life Talk</h3>
-          <div class="event-meta">📅 February 2025</div>
-          <p class="event-desc">
-            A discussion on how AI is used in industry,
-            startups, and research.
-          </p>
-          <div class="event-tags">
-            ✔ Guest speaker
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
           </div>
-        </article>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Event 4: Guess the Output -->
+        <div class="event-card" id="output">
+          <h3>
+            <span class="event-icon">💻</span>
+            <span>Guess the Output</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">Duo</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Type:</span>
+              <span class="value">Coding Challenge</span>
+            </div>
+          </div>
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
+          </div>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Event 5: Open Mic -->
+        <div class="event-card" id="openmic">
+          <h3>
+            <span class="event-icon">🎤</span>
+            <span>Open Mic</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">Individual</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Type:</span>
+              <span class="value">Performance</span>
+            </div>
+          </div>
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
+          </div>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Event 6: Pitch Competition -->
+        <div class="event-card" id="pitch">
+          <h3>
+            <span class="event-icon">💡</span>
+            <span>Pitch Competition</span>
+          </h3>
+          
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span class="label">📅 Date:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">👥 Format:</span>
+              <span class="value">TBA</span>
+            </div>
+            <div class="event-meta-item">
+              <span class="label">🎯 Type:</span>
+              <span class="value">Business/Idea Pitch</span>
+            </div>
+          </div>
+          
+          <div class="event-details">
+            <h4><span class="detail-icon">📋</span> Rules</h4>
+            <div class="placeholder">Rules will be announced soon...</div>
+            
+            <h4><span class="detail-icon">🏆</span> Prizes</h4>
+            <div class="placeholder">Prize details coming soon...</div>
+            
+            <h4><span class="detail-icon">💰</span> Entry Fee</h4>
+            <div class="placeholder">Entry fee details coming soon...</div>
+          </div>
+
+          <div class="event-team">
+            <h4>Event Team</h4>
+            <div class="team-member">
+              <span class="role-label">Event Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+            <div class="team-member">
+              <span class="role-label">Co-Head:</span>
+              <div class="name-input">[Name]</div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="#" class="btn btn-primary">Register Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
 
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
+    <p>© 2025 ALgo42 – AI & Machine Learning Student Club</p>
+    <p>Guided by Faculty · Run by Students</p>
     <p>
-      © 2025 ALgo42 – AI & Machine Learning Student Club<br>
-      Guided by Faculty · Built by Students
+      <a href="#">GitHub</a> ·
+      <a href="#">Instagram</a> ·
+      <a href="#">LinkedIn</a>
     </p>
   </footer>
 
-  <!-- SHARED JS -->
-  <script src="assets/js/main.js" defer></script>
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

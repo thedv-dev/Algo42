@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ALgo42 - AI/ML Student Club</title>
-  <meta name="description" content="ALgo42 is a student AI/ML club that pioneers innovation with electric blue & neon green vibes. Join us for events, projects, and learning!" />
-  <meta name="keywords" content="AI Club, ML Club, Student AI, Machine Learning, ALgo42, Artificial Intelligence, Student Projects, AI Events" />
+  <title>ALgo42 - AI & Machine Learning Student Club | Events, Workshops & Projects</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="ALgo42 is a student-led AI/ML club fostering innovation through hands-on projects, workshops, hackathons, and tech events. Join our community of AI enthusiasts!" />
+  <meta name="keywords" content="ALgo42, AI club, machine learning, student club, tech events, AI workshops, ML projects, hackathons, artificial intelligence, tech community" />
   <meta name="author" content="ALgo42 AI/ML Club" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="ALgo42 - AI & Machine Learning Student Club" />
+  <meta property="og:description" content="Join ALgo42 for AI/ML events, workshops, and projects. First Fest 2025 coming soon!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/" />
+  <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="ALgo42" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALgo42 - AI & ML Student Club" />
+  <meta name="twitter:description" content="Student-led AI/ML club with events, workshops, and projects." />
+  <meta name="twitter:image" content="https://yourwebsite.com/images/twitter-card.jpg" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourwebsite.com/" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ALgo42",
+    "description": "Student AI/ML club dedicated to fostering innovation in artificial intelligence and machine learning",
+    "url": "https://yourwebsite.com",
+    "logo": "https://yourwebsite.com/images/logo.png",
+    "sameAs": [
+      "https://github.com/algo42",
+      "https://instagram.com/algo42",
+      "https://linkedin.com/company/algo42"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "General Inquiry",
+      "email": "contact@algo42.com"
+    }
+  }
+  </script>
+  
   <link rel="icon" href="data:,">
+  
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap');
 
     :root {
       --electric-blue: #00a8ff;
@@ -19,14 +63,14 @@
       --glow-green: #4dff4d;
     }
 
-    /* Reset and base */
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
       scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
       font-family: 'Share Tech Mono', monospace;
       background-color: var(--black-bg);
       color: #ddd;
@@ -37,78 +81,98 @@
     a {
       color: var(--electric-blue);
       text-decoration: none;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
+      transition: color 0.3s ease;
     }
-    a:hover, a:focus {
+    a:hover {
       color: var(--neon-green);
-      text-shadow:
-        0 0 8px var(--neon-green),
-        0 0 15px var(--neon-green);
-      outline: none;
+      text-shadow: 0 0 10px var(--neon-green);
     }
 
-    header, section {
-      padding: 60px 20px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    h1,h2,h3,h4,h5,h6 {
+    h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
       color: var(--electric-blue);
-      margin-bottom: 0.4em;
-      text-shadow:
-        0 0 5px var(--electric-blue),
-        0 0 10px var(--electric-blue);
+      text-shadow: 0 0 10px var(--electric-blue);
     }
 
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.6rem;
-    }
-
-    p {
-      margin-bottom: 1.2em;
-    }
-
-    /* Nav */
+    /* Navigation */
     nav {
       background-color: #111;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 0 15px #00a8ff44;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 10px 0;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    nav li {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a {
-      padding: 6px 8px;
-      border-radius: 4px;
-      display: inline-block;
-    }
-    nav a:hover,
-    nav a:focus {
-      background-color: var(--neon-green);
-      color: black;
-      box-shadow:
-        0 0 8px var(--neon-green),
-        0 0 15px var(--neon-green);
+      box-shadow: 0 0 15px rgba(0,168,255,0.3);
+      padding: 15px 20px;
     }
 
-    /* Hero */
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: var(--neon-green);
+      text-shadow: 0 0 10px var(--neon-green);
+      font-weight: 700;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: var(--neon-green);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: block;
+    }
+    
+    nav a:hover, nav a.active {
+      background-color: var(--neon-green);
+      color: black;
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Hero Section */
     #hero {
       display: flex;
       flex-direction: column;
@@ -116,594 +180,585 @@
       align-items: center;
       min-height: 90vh;
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 100px 20px;
+      background: radial-gradient(circle at center, rgba(0,168,255,0.05), transparent);
     }
+    
     #hero h1 {
-      font-size: 4rem;
-      margin-bottom: 0.6em;
+      font-size: 5rem;
+      margin-bottom: 0.3em;
       letter-spacing: 0.15em;
       color: var(--neon-green);
-      text-shadow:
-        0 0 15px var(--neon-green),
-        0 0 30px var(--neon-green),
-        0 0 45px var(--electric-blue);
+      text-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--electric-blue);
+      animation: glow 2s ease-in-out infinite alternate;
     }
+    
+    @keyframes glow {
+      from { text-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--electric-blue); }
+      to { text-shadow: 0 0 30px var(--neon-green), 0 0 60px var(--electric-blue); }
+    }
+
     #hero p {
-      font-size: 1.4rem;
-      max-width: 600px;
-      color: #aaffaa99;
-      text-shadow: 0 0 7px #39ff1411;
+      font-size: 1.5rem;
+      max-width: 700px;
       margin-bottom: 2em;
+      color: #aaffaa;
+      line-height: 1.8;
     }
-    #hero .btn {
+    
+    .btn {
       background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
       border: none;
       padding: 18px 45px;
       border-radius: 40px;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       cursor: pointer;
       color: black;
       font-weight: 700;
-      box-shadow:
-        0 0 10px var(--electric-blue),
-        0 0 20px var(--neon-green);
+      box-shadow: 0 0 20px var(--neon-green);
       transition: all 0.3s ease;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      display: inline-block;
+      letter-spacing: 0.05em;
     }
-    #hero .btn:hover,
-    #hero .btn:focus {
-      color: var(--neon-green);
-      background-color: transparent;
-      border: 2px solid var(--neon-green);
-      box-shadow:
-        0 0 20px var(--neon-green),
-        0 0 40px var(--electric-blue);
-      outline: none;
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px var(--neon-green);
     }
 
-    /* Sections */
+    /* About Section */
     section {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+    
     .section-header {
       text-align: center;
       margin-bottom: 50px;
-      position: relative;
     }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
     .section-header::after {
       content: "";
       display: block;
       width: 120px;
       height: 3px;
-      margin: 10px auto 0;
+      margin: 15px auto;
       background: linear-gradient(90deg, var(--electric-blue), var(--neon-green));
       border-radius: 50px;
-      box-shadow: 0 0 12px var(--electric-blue), 0 0 22px var(--neon-green);
+      box-shadow: 0 0 15px var(--electric-blue);
     }
 
-    /* Cards Layout for Events, Projects, Blog */
-    .card-grid {
+    #about p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Quick Links */
+    .quick-links {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
     }
 
-    .card {
+    .quick-link-card {
       background: #111;
-      color: #ddd;
-      padding: 20px;
+      border: 2px solid var(--electric-blue);
       border-radius: 15px;
-      box-shadow:
-        0 0 10px #00a8ff88,
-        inset 0 0 10px #00a8ff44;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-    }
-    .card:hover, .card:focus-within {
-      box-shadow:
-        0 0 18px var(--neon-green),
-        0 0 45px var(--electric-blue);
-      transform: translateY(-8px);
-      outline: none;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: var(--neon-green);
-      text-shadow: 0 0 12px var(--neon-green);
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #a8ffa8cc;
-    }
-    .card a.read-more {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--electric-blue);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .card a.read-more:hover,
-    .card a.read-more:focus {
-      color: var(--neon-green);
-      text-shadow:
-        0 0 7px var(--neon-green),
-        0 0 15px var(--neon-green);
-      outline: none;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0,168,255,0.2);
+      cursor: pointer;
     }
 
-    /* Resources list */
+    .quick-link-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px var(--neon-green);
+      border-color: var(--neon-green);
+    }
+
+    .quick-link-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: var(--neon-green);
+    }
+
+    .quick-link-card p {
+      color: #aaa;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .quick-link-card .icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    /* Featured Events Section */
+    .events-preview {
+      background: #111;
+      border-radius: 15px;
+      padding: 40px;
+      margin-top: 60px;
+      border-left: 4px solid var(--neon-green);
+    }
+
+    .events-preview h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--neon-green);
+      text-align: center;
+    }
+
+    .event-quick-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .event-quick-item {
+      background: #0d0d0d;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .event-quick-item:hover {
+      border-color: var(--electric-blue);
+      transform: translateX(5px);
+      box-shadow: 0 0 20px rgba(0,168,255,0.2);
+    }
+
+    .event-quick-item .event-icon-small {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .event-quick-item .event-info {
+      flex: 1;
+    }
+
+    .event-quick-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--electric-blue);
+    }
+
+    .event-quick-item p {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .view-all-events {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .view-all-events .btn {
+      padding: 14px 35px;
+      font-size: 1rem;
+    }
+
+    /* Resources Section */
     .resource-list {
       list-style-type: none;
-      padding-left: 0;
-      max-width: 600px;
+      padding: 0;
+      max-width: 700px;
       margin: 0 auto;
-    }
-    .resource-list li {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      border-bottom: 1px solid #222;
-      padding-bottom: 8px;
-    }
-    .resource-list a {
-      font-weight: 600;
-      color: var(--electric-blue);
-    }
-    .resource-list a:hover,
-    .resource-list a:focus {
-      color: var(--neon-green);
-      text-shadow:
-        0 0 10px var(--neon-green);
-      outline: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    /* Contact */
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    label {
-      font-weight: 600;
-      color: var(--electric-blue);
-      font-size: 1rem;
-      margin-bottom: 6px;
-      display: block;
-      text-shadow: 0 0 6px var(--electric-blue);
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      padding: 12px 18px;
-      background-color: #111;
-      color: #ddd;
-      border: 2px solid #222;
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 1rem;
-      resize: vertical;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-      border-color: var(--neon-green);
-      box-shadow:
-        0 0 20px var(--neon-green),
-        0 0 40px var(--electric-blue);
-      outline: none;
-    }
-    button[type="submit"] {
-      background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
-      border: none;
-      padding: 16px 30px;
-      border-radius: 35px;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: black;
-      cursor: pointer;
-      box-shadow:
-        0 0 14px var(--electric-blue),
-        0 0 28px var(--neon-green);
+    .resource-list li {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 3px solid var(--electric-blue);
       transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
     }
-    button[type="submit"]:hover,
-    button[type="submit"]:focus {
-      color: var(--neon-green);
-      background-color: transparent;
-      box-shadow:
-        0 0 28px var(--neon-green),
-        0 0 55px var(--electric-blue);
-      border: 2px solid var(--neon-green);
-      outline: none;
+
+    .resource-list li:hover {
+      border-left-color: var(--neon-green);
+      transform: translateX(5px);
+      box-shadow: 0 0 20px rgba(57,255,20,0.2);
+    }
+
+    .resource-list a {
+      font-weight: 600;
+      font-size: 1.05rem;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #555;
+      padding: 40px 20px;
       border-top: 1px solid #222;
-    }
-    footer a {
-      color: var(--electric-blue);
-    }
-    footer a:hover, footer a:focus{
-      color: var(--neon-green);
-      text-shadow:
-        0 0 8px var(--neon-green),
-        0 0 18px var(--electric-blue);
-      outline: none;
+      color: #666;
+      font-size: 0.9rem;
+      background: #0a0a0a;
     }
 
-    /* Scroll animations */
+    footer a {
+      color: var(--electric-blue);
+      margin: 0 10px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: #0d0d0d;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 40px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+      }
+
+      nav ul.active {
+        right: 0;
+      }
+
+      nav a {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+      }
+
+      #hero {
+        min-height: 80vh;
+        padding: 80px 20px 60px;
+      }
+
+      #hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 0.08em;
+      }
+
+      #hero p {
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        padding: 14px 35px;
+        font-size: 1rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .quick-link-card {
+        padding: 30px 20px;
+      }
+
+      .resource-list {
+        grid-template-columns: 1fr;
+      }
+
+      #about p {
+        font-size: 1rem;
+      }
+
+      .events-preview {
+        padding: 25px;
+      }
+
+      .events-preview h3 {
+        font-size: 1.6rem;
+      }
+
+      .event-quick-list {
+        grid-template-columns: 1fr;
+      }
+
+      .event-quick-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #hero h1 {
+        font-size: 2.2rem;
+      }
+
+      #hero p {
+        font-size: 1rem;
+      }
+
+      .nav-logo {
+        font-size: 1.3rem;
+      }
+
+      .quick-link-card .icon {
+        font-size: 2.5rem;
+      }
+
+      .quick-link-card h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Fade-in animation */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 1s ease, transform 1s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Responsive */
-    @media (max-width: 720px) {
-      #hero h1 {
-        font-size: 2.8rem;
-      }
-      #hero p {
-        font-size: 1.1rem;
-      }
-      nav ul {
-        gap: 15px;
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 40px 15px;
-      }
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    /* Preloader Styles */
-#loader-wrapper {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0a0a0a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#loader {
-  border: 6px solid var(--black-bg);
-  border-top: 6px solid var(--neon-green);
-  border-right: 6px solid var(--electric-blue);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 2s linear infinite;
-  box-shadow: 0 0 25px var(--electric-blue), 0 0 15px var(--neon-green);
-}
-
-.loading-text {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: var(--neon-green);
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px var(--electric-blue);
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-    @media (max-width: 720px) {
-  * {
-    text-shadow: none !important;
-    box-shadow: none !important;
-  }
-
-  #hero h1 {
-    text-shadow: 0 0 10px var(--neon-green);
-  }
-
-  .card {
-    transform: none !important;
-  }
-}
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 12px;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: var(--neon-green);
-  box-shadow: 0 0 10px var(--neon-green);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    z-index: 1100;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    display: none;
-    width: 100%;
-    background: #0a0a0a;
-    padding: 20px 0;
-    box-shadow: 0 0 20px var(--electric-blue);
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-}
-
   </style>
 </head>
 
 <body>
-  <div id="loader-wrapper">
-  <div id="loader"></div>
-  <p class="loading-text">Loading ALgo42...</p>
-</div>
-  <nav role="navigation" aria-label="Primary Navigation">
-    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="nav-links">
-      <li><a href="#hero" tabindex="1">Home</a></li>
-      <li><a href="#about" tabindex="2">About Us</a></li>
-      <li><a href="#events" tabindex="3">Events</a></li>
-      <li><a href="#projects" tabindex="4">Projects</a></li>
-      <li><a href="#blog" tabindex="6">Blog</a></li>
-    </ul>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ALgo42</div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="structure.html">Structure & Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header id="hero" class="fade-in" role="banner">
+  <header id="hero">
     <h1>ALgo42</h1>
     <p>Explore the frontier of AI and Machine Learning with us. Innovate. Learn. Create.</p>
-    <a href="#about" class="btn" tabindex="8" aria-label="Learn more about ALgo42">Discover More</a>
+    <a href="#about" class="btn">Discover More</a>
   </header>
 
   <main>
-    <section id="about" class="fade-in" tabindex="-1">
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
       <div class="section-header">
-        <h2>About Us</h2>
+        <h2>About ALgo42</h2>
       </div>
-      <p>ALgo42 is a student-led AI/ML club dedicated to fostering innovation, collaboration, and learning in artificial intelligence and machine learning. We believe in hands-on projects, insightful events, and sharing knowledge to shape the future.</p>
-      <p>Join us to collaborate with like-minded peers, participate in hackathons, attend talks by AI leaders, and build cutting-edge projects.</p>
+      <p>
+        ALgo42 is a student-led AI/ML club dedicated to fostering innovation, collaboration, and learning in artificial intelligence and machine learning. We believe in hands-on projects, insightful events, and sharing knowledge to shape the future.
+      </p>
+      <p>
+        Join us to collaborate with like-minded peers, participate in competitions, attend talks by AI leaders, and build cutting-edge projects that make a difference.
+      </p>
     </section>
 
-    <section id="events" class="fade-in" tabindex="-1">
-      <div class="section-header">
-        <h2>Events</h2>
-      </div>
-      <div class="card-grid" role="list">
-        <article class="card" role="listitem" tabindex="0" aria-label="Upcoming AI Workshop">
-          <h3>AI Workshop</h3>
-          <p>Date: August 15, 2024</p>
-          <p>Interactive sessions on deep learning fundamentals and cutting-edge research trends.</p>
-          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
+    <!-- Featured Events -->
+    <section class="fade-in">
+      <div class="events-preview">
+        <h3>First Fest 2025 - Featured Events</h3>
+        <div class="event-quick-list">
+          
+          <a href="events.html#esports" class="event-quick-item">
+            <span class="event-icon-small">🎮</span>
+            <div class="event-info">
+              <h4>Esports Tournament</h4>
+              <p>Free Fire & BGMI | Squad Mode</p>
+            </div>
+          </a>
 
-          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
+          <a href="events.html#poster" class="event-quick-item">
+            <span class="event-icon-small">🎨</span>
+            <div class="event-info">
+              <h4>Poster Making</h4>
+              <p>Canva Only | Individual</p>
+            </div>
+          </a>
 
-        </article>
-        <article class="card" role="listitem" tabindex="0" aria-label="Annual ML Hackathon">
-          <h3>Annual ML Hackathon</h3>
-          <p>Date: September 28-29, 2024</p>
-          <p>Two days of intense coding and creativity building AI-driven solutions to real problems.</p>
-          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
-          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
-        </article>
-        <article class="card" role="listitem" tabindex="0" aria-label="Guest Speaker Series: AI Ethics">
-          <h3>Guest Speaker Series: AI Ethics</h3>
-          <p>Date: October 10, 2024</p>
-          <p>Join leading experts discussing ethical considerations in AI development and deployment.</p>
-          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
-          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
-        </article>
+          <a href="events.html#quiz" class="event-quick-item">
+            <span class="event-icon-small">🧠</span>
+            <div class="event-info">
+              <h4>Technical Quiz</h4>
+              <p>AI/ML & Tech | Duo Event</p>
+            </div>
+          </a>
+
+          <a href="events.html#output" class="event-quick-item">
+            <span class="event-icon-small">💻</span>
+            <div class="event-info">
+              <h4>Guess the Output</h4>
+              <p>Coding Challenge | Duo</p>
+            </div>
+          </a>
+
+          <a href="events.html#openmic" class="event-quick-item">
+            <span class="event-icon-small">🎤</span>
+            <div class="event-info">
+              <h4>Open Mic</h4>
+              <p>Performance | Individual</p>
+            </div>
+          </a>
+
+          <a href="events.html#pitch" class="event-quick-item">
+            <span class="event-icon-small">💡</span>
+            <div class="event-info">
+              <h4>Pitch Competition</h4>
+              <p>Business Ideas | TBA</p>
+            </div>
+          </a>
+
+        </div>
+        <div class="view-all-events">
+          <a href="events.html" class="btn">View All Events & Register</a>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="fade-in" tabindex="-1">
-      <div class="section-header">
-        <h2>Projects</h2>
+    <!-- Quick Links -->
+    <section class="fade-in">
+      <div class="quick-links">
+        
+        <a href="structure.html" class="quick-link-card">
+          <span class="icon">🏛️</span>
+          <h3>Our Structure</h3>
+          <p>Meet our core team and learn about how ALgo42 operates</p>
+        </a>
+
+        <a href="events.html" class="quick-link-card">
+          <span class="icon">🎯</span>
+          <h3>All Events</h3>
+          <p>Check out our complete event lineup and register</p>
+        </a>
+
+        <a href="gallery.html" class="quick-link-card">
+          <span class="icon">📸</span>
+          <h3>Gallery</h3>
+          <p>View photos and videos from our events</p>
+        </a>
+
+        <div class="quick-link-card">
+          <span class="icon">🚀</span>
+          <h3>Projects</h3>
+          <p>Explore innovative AI/ML projects by our members</p>
+        </div>
+
       </div>
-      <h4>Coming Soon...</h4>
     </section>
 
-    <section id="resources" class="fade-in" tabindex="-1">
+    <!-- Resources -->
+    <section id="resources" class="fade-in">
       <div class="section-header">
-        <h2>Resources</h2>
+        <h2>Learning Resources</h2>
       </div>
-      <ul class="resource-list" aria-label="List of learning resources">
-        <li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" tabindex="0">TensorFlow - Machine Learning Framework</a></li>
-        <li><a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" tabindex="0">PyTorch - Deep Learning Library</a></li>
-        <li><a href="https://www.kaggle.com/" target="_blank" rel="noopener noreferrer" tabindex="0">Kaggle - Competitions and Datasets</a></li>
-        <li><a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer" tabindex="0">Google Colab - Free Cloud Notebooks</a></li>
-        <li><a href="https://fast.ai/" target="_blank" rel="noopener noreferrer" tabindex="0">fast.ai - Practical Deep Learning Courses</a></li>
+      <ul class="resource-list">
+        <li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">TensorFlow - ML Framework</a></li>
+        <li><a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">PyTorch - Deep Learning</a></li>
+        <li><a href="https://www.kaggle.com/" target="_blank" rel="noopener noreferrer">Kaggle - Competitions</a></li>
+        <li><a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab - Free GPUs</a></li>
+        <li><a href="https://fast.ai/" target="_blank" rel="noopener noreferrer">fast.ai - Practical Courses</a></li>
+        <li><a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face - Models</a></li>
       </ul>
     </section>
 
-    <section id="blog" class="fade-in" tabindex="-1">
-      <div class="section-header">
-        <h2>Blog</h2>
-      </div>
-      <div class="card-grid" role="list">
-        <article class="card" role="listitem" tabindex="0" aria-label="Blog post: Latest trends in AI">
-          <h3>Latest trends in AI</h3>
-          <p>Dive into the forefront of AI innovations, from generative models to reinforcement learning breakthroughs.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read blog about latest trends in AI">Read More</a>
-        </article>
-        <article class="card" role="listitem" tabindex="0" aria-label="Blog post: Building robust ML models">
-          <h3>Building robust ML models</h3>
-          <p>Tips and best practices for training, tuning, and deploying machine learning models that perform well in real-world scenarios.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read blog about building robust ML models">Read More</a>
-        </article>
-        <article class="card" role="listitem" tabindex="0" aria-label="Blog post: Women in AI - inspiring stories">
-          <h3>Women in AI - inspiring stories</h3>
-          <p>A tribute to women leaders and pioneers driving innovation and diversity in the AI/ML community.</p>
-          <a href="#" class="read-more" tabindex="0" aria-label="Read blog about women in AI inspiring stories">Read More</a>
-        </article>
-      </div>
-    </section>
-
-
-    <section id="structure" class="fade-in">
-      <div class="section-header">
-        <h2>How Algo42 Works</h2>
-      </div>
-      <p>
-        Algo42 is a student-initiated AI/ML club focused on learning, collaboration, and events.
-        The club operates through a core team supported by volunteers, with guidance and
-        coordination handled by faculty, to ensure continuity and academic alignment.
-      </p>
-    </section>
-    
-    <section id="team" class="fade-in">
-      <div class="section-header">
-        <h2>Core Team</h2>
-      </div>
-      <p>
-        Algo42 is run by a student core team responsible for planning, execution,
-        and coordination of activities throughout the academic year.
-      </p>
-      <p><em>Core roles will be announced soon.</em></p>
-    </section>
-
-
   </main>
-  <script>
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("loader-wrapper");
-      loader.style.opacity = "0";
-      loader.style.transition = "opacity 0.6s ease";
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 600);
-    });
-  </script>
 
   <footer>
+    <p>© 2025 ALgo42 – AI & Machine Learning Student Club</p>
+    <p>Guided by Faculty · Run by Students</p>
     <p>
-      © 2025 ALgo42 – AI & Machine Learning Student Club<br>
-      Guided by Faculty | Run by Students
-    </p>
-    <p>
-      <a href="https://github.com/algo42">GitHub</a> ·
+      <a href="#">GitHub</a> ·
       <a href="#">Instagram</a> ·
       <a href="#">LinkedIn</a>
     </p>
   </footer>
 
-
   <script>
-    // Scroll animation on elements with fade-in class
-    const fadeEls = document.querySelectorAll('.fade-in');
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-    const observerOptions = {
-      threshold: 0.1
-    };
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
 
-    const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    fadeEls.forEach(el => {
-      fadeInOnScroll.observe(el);
-    });
+    fadeElements.forEach(el => observer.observe(el));
 
-    // Form submission simulation (no backend)
-    const form = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      formStatus.textContent = '';
-      if (!form.checkValidity()) {
-        formStatus.style.color = 'var(--neon-green)';
-        formStatus.textContent = 'Please fill out all fields correctly.';
-        return;
-      }
-
-      // Fake async submission
-      formStatus.style.color = 'var(--electric-blue)';
-      formStatus.textContent = 'Sending message...';
-
-      setTimeout(() => {
-        formStatus.style.color = 'var(--neon-green)';
-        formStatus.textContent = 'Thank you for contacting ALgo42! We will get back to you soon.';
-        form.reset();
-      }, 1500);
-    });
-
-    // Accessibility improvement: highlight focused cards for keyboard users
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('focus', () => {
-        card.style.outline = '2px solid var(--neon-green)';
-        card.style.outlineOffset = '3px';
-      });
-      card.addEventListener('blur', () => {
-        card.style.outline = 'none';
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const hamburger = document.querySelector(".hamburger");
-      const navLinks = document.getElementById("nav-links");
-
-    if (!hamburger || !navLinks) return;
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-
-        const expanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.setAttribute("aria-expanded", String(!expanded));
-      });
-    });
-</script>
-
 
 </body>
 </html>
