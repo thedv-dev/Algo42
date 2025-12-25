@@ -410,11 +410,7 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 
-@media (max-width: 768px) {
-  nav ul li:nth-child(n+5) {
-    display: none;
-  }
-}
+
     @media (max-width: 720px) {
   * {
     text-shadow: none !important;
@@ -477,16 +473,6 @@
 
   </style>
 </head>
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    const expanded = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", !expanded);
-  });
-</script>
 
 <body>
   <div id="loader-wrapper">
@@ -499,14 +485,12 @@
       <span></span>
       <span></span>
     </button>
-    <ul>
+    <ul id="nav-links">
       <li><a href="#hero" tabindex="1">Home</a></li>
       <li><a href="#about" tabindex="2">About Us</a></li>
       <li><a href="#events" tabindex="3">Events</a></li>
       <li><a href="#projects" tabindex="4">Projects</a></li>
-      <li><a href="#resources" tabindex="5">Resources</a></li>
       <li><a href="#blog" tabindex="6">Blog</a></li>
-      <li><a href="#contact" tabindex="7">Contact</a></li>
     </ul>
   </nav>
 
@@ -534,19 +518,24 @@
           <h3>AI Workshop</h3>
           <p>Date: August 15, 2024</p>
           <p>Interactive sessions on deep learning fundamentals and cutting-edge research trends.</p>
-          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
+          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
+
+          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
+
         </article>
         <article class="card" role="listitem" tabindex="0" aria-label="Annual ML Hackathon">
           <h3>Annual ML Hackathon</h3>
           <p>Date: September 28-29, 2024</p>
           <p>Two days of intense coding and creativity building AI-driven solutions to real problems.</p>
-          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
+          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
+          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
         </article>
         <article class="card" role="listitem" tabindex="0" aria-label="Guest Speaker Series: AI Ethics">
           <h3>Guest Speaker Series: AI Ethics</h3>
           <p>Date: October 10, 2024</p>
           <p>Join leading experts discussing ethical considerations in AI development and deployment.</p>
-          <a href="https://forms.gle/XXXX" class="btn small-btn">Register Now</a>
+          <p style="font-size:0.85rem; color:#aaa;">✔ Free | ✔ Open to all students | ✔ Certificate provided</p>
+          <a href="https://forms.gle/XXXX" target="_blank" rel="noopener noreferrer" class="btn small-btn" aria-label="Register for AI Workshop">Register (Google Form)</a>
         </article>
       </div>
     </section>
@@ -619,20 +608,29 @@
 
 
   </main>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader-wrapper");
-    loader.style.opacity = "0";
-    loader.style.transition = "opacity 0.6s ease";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 600);
-  });
-</script>
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader-wrapper");
+      loader.style.opacity = "0";
+      loader.style.transition = "opacity 0.6s ease";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 600);
+    });
+  </script>
 
   <footer>
-    <p>&copy; 2025-56 ALgo42 AI/ML Student Club. All Rights Reserved. | <a href="https://github.com/algo42" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    <p>
+      © 2025 ALgo42 – AI & Machine Learning Student Club<br>
+      Guided by Faculty | Run by Students
+    </p>
+    <p>
+      <a href="https://github.com/algo42">GitHub</a> ·
+      <a href="#">Instagram</a> ·
+      <a href="#">LinkedIn</a>
+    </p>
   </footer>
+
 
   <script>
     // Scroll animation on elements with fade-in class
@@ -690,5 +688,16 @@
       });
     });
   </script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !expanded);
+    });
+  </script>
+
 </body>
 </html>
