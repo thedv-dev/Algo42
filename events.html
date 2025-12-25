@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | ALgo42</title>
+
+  <!-- SEO -->
+  <meta name="description" content="AI & ML workshops, events, and sessions organized by ALgo42 student club." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Page-specific styles */
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #050505;
+      color: #eaeaea;
+    }
+
+    main {
+      padding: 120px 6% 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00f5a0, #00d9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .page-header p {
+      max-width: 700px;
+      margin: 20px auto 0;
+      color: #aaa;
+    }
+
+    .event-section {
+      margin-bottom: 90px;
+    }
+
+    .event-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 4px solid #00f5a0;
+      padding-left: 14px;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .event-card {
+      background: #0b0b0b;
+      border-radius: 16px;
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(0,245,160,0.12);
+    }
+
+    .event-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .event-meta {
+      font-size: 0.9rem;
+      color: #8a8a8a;
+      margin-bottom: 14px;
+    }
+
+    .event-desc {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      margin-bottom: 22px;
+    }
+
+    .event-tags {
+      font-size: 0.8rem;
+      color: #7dffd2;
+      margin-bottom: 20px;
+    }
+
+    .event-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn.primary {
+      background: linear-gradient(90deg, #00f5a0, #00d9ff);
+      color: #000;
+    }
+
+    .btn.primary:hover {
+      opacity: 0.85;
+    }
+
+    .btn.secondary {
+      border: 1px solid #00f5a0;
+      color: #00f5a0;
+    }
+
+    .btn.secondary:hover {
+      background: rgba(0,245,160,0.1);
+    }
+
+    .past .event-card {
+      opacity: 0.7;
+    }
+
+    .past .event-card:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (same as other pages) -->
+  <header>
+    <nav>
+      <div class="logo">ALgo42</div>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- PAGE INTRO -->
+    <section class="page-header fade-in">
+      <h1>Events</h1>
+      <p>
+        Hands-on workshops, talks, and collaborative sessions
+        organized by the ALgo42 AI & ML Student Club.
+      </p>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section id="upcoming" class="event-section fade-in">
+      <h2>Upcoming Events</h2>
+
+      <div class="event-grid">
+
+        <article class="event-card">
+          <h3>AI Foundations Workshop</h3>
+          <div class="event-meta">📅 15 July 2025 · ⏰ 10:00 AM</div>
+          <p class="event-desc">
+            A beginner-friendly hands-on workshop covering AI,
+            machine learning basics, and real-world applications.
+          </p>
+          <div class="event-tags">
+            ✔ Free · ✔ Certificate · ✔ Open to all
+          </div>
+          <div class="event-actions">
+            <a href="https://forms.gle/XXXX" target="_blank" class="btn primary">
+              Register
+            </a>
+            <a href="#" class="btn secondary">
+              Details
+            </a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <h3>Prompt Engineering Jam</h3>
+          <div class="event-meta">📅 28 July 2025 · ⏰ 2:00 PM</div>
+          <p class="event-desc">
+            Learn how to craft effective prompts for AI systems
+            and participate in live prompt challenges.
+          </p>
+          <div class="event-tags">
+            ✔ Hands-on · ✔ Limited seats
+          </div>
+          <div class="event-actions">
+            <a href="https://forms.gle/XXXX" target="_blank" class="btn primary">
+              Register
+            </a>
+            <a href="#" class="btn secondary">
+              Details
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PAST EVENTS -->
+    <section id="past" class="event-section past fade-in">
+      <h2>Past Events</h2>
+
+      <div class="event-grid">
+
+        <article class="event-card">
+          <h3>Introduction to Python</h3>
+          <div class="event-meta">📅 March 2025</div>
+          <p class="event-desc">
+            A beginner coding session introducing Python
+            for AI and automation.
+          </p>
+          <div class="event-tags">
+            ✔ 120+ participants
+          </div>
+        </article>
+
+        <article class="event-card">
+          <h3>AI in Real Life Talk</h3>
+          <div class="event-meta">📅 February 2025</div>
+          <p class="event-desc">
+            A discussion on how AI is used in industry,
+            startups, and research.
+          </p>
+          <div class="event-tags">
+            ✔ Guest speaker
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2025 ALgo42 – AI & Machine Learning Student Club<br>
+      Guided by Faculty · Built by Students
+    </p>
+  </footer>
+
+  <!-- SHARED JS -->
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
