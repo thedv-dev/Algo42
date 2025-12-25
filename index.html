@@ -409,7 +409,7 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-
+}
 
     @media (max-width: 720px) {
   * {
@@ -689,15 +689,21 @@
     });
   </script>
   <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.getElementById("nav-links");
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+    if (!hamburger || !navLinks) return;
 
     hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-      const expanded = hamburger.getAttribute("aria-expanded") === "true";
-      hamburger.setAttribute("aria-expanded", !expanded);
+        navLinks.classList.toggle("show");
+
+        const expanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", String(!expanded));
+      });
     });
-  </script>
+</script>
+
 
 </body>
 </html>
