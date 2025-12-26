@@ -545,6 +545,21 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .rules-list {
+      padding-left: 25px;
+      color: #bbb;
+      line-height:  1.8;
+    }
+
+    .rules-list li {
+      margin-bottom: 10px;
+      color: #bbb;
+    }
+
+    .rules-list li::marker {
+      color: var(--neon-green);
+      font-weight: 600;
+    }
   </style>
 </head>
 
@@ -657,11 +672,13 @@
           
           <div class="event-details">
             <h4><span class="detail-icon">📋</span> Rules</h4>
-            <div class="placeholder">1. Posters must be created only on Canva during the event 
-              2. File format: PDF or PNG 
-              3. Language: English only 
-              4. Content must be original 
-              5. Internet allowed only for Canva resources
+            <div class="placeholder"><ol class="rules-list">
+                <li>Posters must be created only on Canva during the event</li>
+                <li>File format: PDF or PNG</li>
+                <li>Language: English only</li>
+                <li>Content must be original</li>
+                <li>Internet allowed only for Canva resources</li>
+              </ol>
             </div>
             
             <h4><span class="detail-icon">🏆</span> Prizes</h4>
