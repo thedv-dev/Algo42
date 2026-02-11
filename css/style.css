@@ -708,19 +708,21 @@ footer a {
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .event-card {
   background: linear-gradient(135deg, #111 0%, #0d0d0d 100%);
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px;
   border: 2px solid #333;
   box-shadow: 0 0 25px rgba(0, 168, 255, 0.15);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-card::before {
@@ -763,7 +765,7 @@ footer a {
 .event-meta {
   display: grid;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
 }
@@ -787,7 +789,7 @@ footer a {
 }
 
 .event-details {
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .event-details h4 {
@@ -828,7 +830,7 @@ footer a {
   padding-top: 25px;
   border-top: 1px solid #333;
   background: #0d0d0d;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
 }
 
@@ -866,7 +868,8 @@ footer a {
 }
 
 .event-actions {
-  margin-top: 30px;
+  margin-top: auto;
+  padding-top: 30px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
