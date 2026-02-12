@@ -54,6 +54,30 @@
   
   <link rel="stylesheet" href="css/style.css">
 </head>
+<!-- Poster Popup -->
+<div id="posterPopup" class="popup-overlay">
+  
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+
+    <a href="/registration.html">
+      <img src="poster.jpg" alt="Event Poster" class="popup-poster">
+    </a>
+
+  </div>
+
+</div>
+<script>
+
+window.onload = function() {
+  document.getElementById("posterPopup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("posterPopup").style.display = "none";
+}
+
+</script>
 
 <body>
 
