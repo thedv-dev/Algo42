@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - ALgo42 | AI/ML Student Club Photos & Videos</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse photos and videos from ALgo42 events, workshops, and activities. See our AI/ML student community in action." />
+  <meta name="keywords" content="ALgo42 gallery, AI club photos, ML events, student tech community, hackathon photos, tech fest images" />
+  <meta name="author" content="ALgo42 AI/ML Club" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Gallery - ALgo42 AI/ML Student Club" />
+  <meta property="og:description" content="Browse photos and videos from ALgo42 events, workshops, and activities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://algo42.vercel.app/gallery.html" />
+  <meta property="og:image" content="https://algo42.vercel.app/assets/images/og-image.jpg" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery - ALgo42" />
+  <meta name="twitter:description" content="Browse photos and videos from ALgo42 events and activities." />
+  <meta name="twitter:image" content="https://algo42.vercel.app/assets/images/twitter-card.jpg" />
+  
+  <link rel="icon" href="data:,">
+  <link rel="canonical" href="https://algo42.vercel.app/gallery.html" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ALgo42</div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="structure.html">Structure & Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Gallery</h1>
+    <p>Memories from our events, workshops, and community activities</p>
+  </div>
+
+  <main>
+
+    <section class="fade-in">
+      
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="workshops">Workshops</button>
+        <button class="filter-btn" data-filter="team">Team</button>
+      </div>
+
+      <!-- Placeholder - To be replaced with actual content -->
+      <div class="placeholder-gallery">
+        <div class="icon">📸</div>
+        <h3>Gallery Coming Soon</h3>
+        <p>Photos and videos from our First Fest 2025 will be uploaded here.</p>
+        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+          Check back after our events to see all the amazing moments!
+        </p>
+      </div>
+
+      <!-- Example Gallery Structure (Hidden for now, uncomment when you have images) -->
+      <!--
+      <h2 class="gallery-section-title">First Fest 2025</h2>
+      <div class="gallery-grid" data-category="events">
+        
+        <div class="gallery-item" onclick="openLightbox('assets/images/event1.jpg', 'Esports Tournament')">
+          <img src="assets/images/event1.jpg" alt="Esports Tournament" loading="lazy" />
+          <div class="overlay">
+            <h3>Esports Tournament</h3>
+            <p>Intense gaming action</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('assets/videos/highlights.mp4', 'Event Highlights', true)">
+          <video src="assets/videos/highlights.mp4" muted></video>
+          <div class="play-button">▶</div>
+          <div class="overlay">
+            <h3>Event Highlights</h3>
+            <p>Best moments compilation</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('assets/images/poster-event.jpg', 'Poster Making Competition')">
+          <img src="assets/images/poster-event.jpg" alt="Poster Making" loading="lazy" />
+          <div class="overlay">
+            <h3>Poster Making</h3>
+            <p>Creative designs showcase</p>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="gallery-section-title">Team Moments</h2>
+      <div class="gallery-grid" data-category="team">
+        
+        <div class="gallery-item" onclick="openLightbox('assets/images/team.jpg', 'Core Team')">
+          <img src="assets/images/team.jpg" alt="ALgo42 Core Team" loading="lazy" />
+          <div class="overlay">
+            <h3>Core Team</h3>
+            <p>The people behind ALgo42</p>
+          </div>
+        </div>
+
+      </div>
+      -->
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" style="display:none;" />
+      <video id="lightbox-video" controls style="display:none;"></video>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 ALgo42 – AI & Machine Learning Student Club</p>
+    <p>Guided by Faculty · Run by Students</p>
+    <p>
+      <a href="https://github.com/algo42" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+      <a href="https://instagram.com/algo42" target="_blank" rel="noopener noreferrer">Instagram</a> ·
+      <a href="https://linkedin.com/company/algo42" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+
+</body>
+</html>
