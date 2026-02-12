@@ -54,30 +54,6 @@
   
   <link rel="stylesheet" href="css/style.css">
 </head>
-<!-- Poster Popup -->
-<div id="posterPopup" class="popup-overlay">
-  
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">✖</span>
-
-    <a href="events.html">
-      <img src="PosterYantra2k26.jpeg" alt="Event Poster" class="popup-poster">
-    </a>
-
-  </div>
-
-</div>
-<script>
-
-window.onload = function() {
-  document.getElementById("posterPopup").style.display = "flex";
-}
-
-function closePopup() {
-  document.getElementById("posterPopup").style.display = "none";
-}
-
-</script>
 
 <body>
 
@@ -239,6 +215,30 @@ function closePopup() {
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
+
+<!-- Small Poster Popup -->
+<div id="posterPopup" class="small-popup">
+
+  <span class="close-btn" onclick="closePopup()">✖</span>
+
+  <a href="events.html">
+    <img src="PosterYantra2k26.jpeg" alt="Event Poster">
+  </a>
+
+</div>
+<script>
+window.onload = function() {
+  if (!localStorage.getItem("posterSeen")) {
+    document.getElementById("posterPopup").style.display = "block";
+    localStorage.setItem("posterSeen", "true");
+  }
+}
+
+function closePopup() {
+  document.getElementById("posterPopup").style.display = "none";
+}
+</script>
+
 
 </body>
 </html>
