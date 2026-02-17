@@ -781,11 +781,52 @@ footer a {
   flex-wrap: wrap;
 }
 
+/* Improve Event Card Padding */
+.event-card {
+  padding: 35px;
+}
+
+/* Improve Button Layout */
+.event-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Make buttons balanced */
+.event-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Make Register slightly dominant */
+.btn-primary {
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.4);
+}
+
+/* Smooth hover animation */
+.event-actions .btn:hover {
+  transform: translateY(-3px);
+}
+
+
 .btn-primary {
   background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
   color: black;
-  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+  border: none;
 }
+
 
 .btn-primary:hover {
   transform: scale(1.05);
@@ -797,6 +838,16 @@ footer a {
   border: 2px solid var(--electric-blue);
   color: var(--electric-blue);
 }
+
+/* Perfect center alignment for Details button */
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 20px;
+}
+
 
 .btn-secondary:hover {
   background: var(--electric-blue);
@@ -1020,6 +1071,14 @@ footer a {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .event-actions {
+    flex-direction: column;
+  }
+
+  .event-actions .btn {
+    width: 100%;
+  }
+
   .hamburger {
     display: flex;
   }
