@@ -216,28 +216,8 @@
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
 
-<!-- Small Poster Popup -->
-<div id="posterPopup" class="small-popup">
 
-  <span class="close-btn" onclick="closePopup()">✖</span>
 
-  <a href="events.html">
-    <img src="6f680613-1.png" alt="Event Poster">
-  </a>
-
-</div>
-<script>
-window.onload = function() {
-  if (!localStorage.getItem("posterSeen")) {
-    document.getElementById("posterPopup").style.display = "block";
-    localStorage.setItem("posterSeen", "true");
-  }
-}
-
-function closePopup() {
-  document.getElementById("posterPopup").style.display = "none";
-}
-</script>
 
 
 </body>
